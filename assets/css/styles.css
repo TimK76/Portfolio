@@ -1,0 +1,38 @@
+:root {
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #fff;  
+}
+
+
+/* Apply Header Styles */
+header {
+    color: var(--tertiary-color);
+    background-image: url("../images/pexels-s-migaj-747964b.jpg");
+    background-position: bottom;
+    background-size: 100%;
+    background-position-y: 50%;
+    
+}
+
+header h1 {
+    margin-left: 35px;
+    
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    font-size: 24px;
+ }
+
+header caption {
+
+}
+.title {
+
+}
+
+.title #bio {
+
+}
