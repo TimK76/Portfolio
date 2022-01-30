@@ -70,13 +70,12 @@ header nav a:hover {
 }
 
 #selfie {
-    /* display: flex; */
     height: 300px;
     width: auto;
     z-index: 3;
 }
 
-section h3 { 
+section .hero #subtitle { 
     position: relative;
     color: var(--primary-color);
     font-size: 24px;
@@ -87,16 +86,15 @@ section h3 {
 }
 
 /* Begin Main Section */
-main article figure {
-    background-color: var(--secondary-color);
-}
-main article div h3 {
-    color: var(--primary-color);
-    font-family: sans-serif;
-    font-style: italic;
-    font-size: 32px;
+main {
+    display: flex;
 }
 
+main section .title {
+    display:block;
+    font-size: 32px;
+    border-right: 4px solid var(--tertiary-color);
+}
 /* Begin Footer Section */
 footer {
     color: var(--secondary-color);
