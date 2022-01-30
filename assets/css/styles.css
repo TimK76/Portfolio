@@ -1,25 +1,36 @@
 :root {
     --primary-color: #fff;
     --secondary-color: rgba(1, 24, 10, 0.918);
-    --tertiary-color: rgba(4, 119, 48, 0.513);  
+    --tertiary-color: rgba(31, 71, 47, 0.931);  
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }  
 
 /* Apply Header Styles */
+
 header {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 10px 45px 10px 45px;
     background-color: var(--tertiary-color);
     position: sticky;
+    top: 0;
     position: -webkit-sticky;
     z-index: 5;   
+}
+
+header div {
+    font-size: 32px;
+    font-weight: bolder;
+    margin: 0 10px 0 10px;
+    padding: 0 10px 0 10px;
 }
 
 header nav {
@@ -29,32 +40,76 @@ header nav {
 header nav a {
     display: inline-block;
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 24px;
-    border-bottom: 2px var(--secondary-color) solid;
+    border-bottom: 2px var(--primary-color) solid;
     margin:0 10px 0 10px;
-}
-/* Apply "hero" styles */
-div {
-    display: flex;
-    background-image: url("../images/pexels-s-migaj-747964b.jpg");
-    background-position: bottom;
-    background-size: 100%;
-    background-position-y: 50%;
-    min-height: 300px;
+    padding: 0 10px 0 10px;
+    font-weight: bolder;
 }
 
-div h3 {
+header nav a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 5px;
+    text-shadow: none;
+}
+/* Apply "hero" styles */
+
+.hero {
+    display: flex;
+    background-image:url("../images/pexels-s-migaj-747964b.jpg");
+    background-size: cover;
+    display: flex;
+    /* flex-wrap: wrap; */
+    max-height: 300px;
+    flex: 4;
+    background-position: 80%;
+    justify-content: space-between;
+    padding: 0 45px 0 0;
+}
+
+#selfie {
+    /* display: flex; */
+    height: 300px;
+    width: auto;
+    z-index: 3;
+}
+
+section h3 { 
+    position: relative;
+    color: var(--primary-color);
+    font-size: 24px;
+    height: 50px;
+    margin-top: 225px;
+    padding: 10px;
+    background-color: var(--tertiary-color);
+}
+
+/* Begin Main Section */
+main article figure {
+    background-color: var(--secondary-color);
+}
+main article div h3 {
     color: var(--primary-color);
     font-family: sans-serif;
     font-style: italic;
     font-size: 32px;
 }
 
+/* Begin Footer Section */
 footer {
     color: var(--secondary-color);
     display: flex;
-    position: ;
+    justify-content: center;
     padding: 10px 45px 10px 45px;
     background-color: var(--tertiary-color);
+    min-height: 125px;
+}
+
+footer h4 {
+    color: var(--primary-color);
+    justify-content: center;
+    font-size: 24px;
+    margin-top: 32px;
 }
