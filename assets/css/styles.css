@@ -14,6 +14,7 @@
 /* Apply Header Styles */
 body {
     background-color: var(--secondary-color);
+    width: 100%;
 }
 header {
     color: var(--primary-color);
@@ -22,7 +23,7 @@ header {
     flex-wrap: wrap;
     padding: 10px 45px 10px 45px;
     z-index: 5;  
-    border: 3px solid red; 
+    /* border: 3px solid red;  */
 }
 
 header h1 {
@@ -65,13 +66,12 @@ header nav a:hover {
     background-position: 80%;
     justify-content: space-between;
     padding: 0 45px 0 0;
-    border: 3px solid red; 
+    /* border: 3px solid red;  */
 }
 
 #selfie {
-    height: auto;
-    width: 285px;
-    z-index: 3;
+    height: 300px;
+    z-index: 1;
 }
 
 #subtitle {  
@@ -86,15 +86,17 @@ header nav a:hover {
 
 /* Begin Main Section */
     
-main {
+/* main {
     margin: 10px 35px;
     border: 3px solid red; 
-}
+} */
 
 main section {
     display: flex;
     color: var(--primary-color); 
-    justify-content: space-between;    
+    justify-content: space-between; 
+    text-decoration-color: #fff; 
+    /* border: 3px solid red;   */
 }
 
 .title {
@@ -176,10 +178,30 @@ figure div:hover {
 }
 
 /* Begin Contact me section */
-.contact-me {
+#contact {
+    /* display: flex;
+    flex-wrap: wrap;*/
+    justify-content: start; 
+   
+}
+
+#contact-me-container {
     color: var(--primary-color); font-size: 24px;
-    margin: 30px 20px 60px 20px;
-    padding: 5px 10px 0 10px;
+    margin: 30px 20px;
+    padding: 5px 10px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+
+.contact-me, .contact-me a {
+    color: var(--primary-color);
+    font-size: 24px;
+    text-decoration: none;
+    margin: 5px 15px;
+    padding: 5px 10px;
     border-bottom: 4px solid var(--tertiary-color);
 }
 
@@ -196,7 +218,7 @@ footer {
     justify-content: center;
     padding: 10px 45px 10px 45px;
     min-height: 125px;
-    border: 3px solid red; 
+    /* border: 3px solid red;  */
 }
 
 footer h4 {
@@ -209,28 +231,52 @@ footer h4 {
 
   /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
   @media screen and (max-width: 980px) {
+    * {
+        max-width: 100%;
+    }
     header {
-        padding: 20 0 20 0;
+        padding: 20px;
         justify-content: center;
-        position: relative;
+        align-items: baseline;
       }
-    .hero {
-        background-position: 100%;
+    header nav a {
+          font-size: 32px;
+          margin-top: 15px;
+      }
+    #contact {
+        /* justify-content: start; */
+    }
 
-    }
-    section article {
-        Display: flex;
+    #contact-me-container {
+        display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
+
   }
   
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
   @media screen and (max-width: 768px) {
+    header nav {
+       display: flex;
+    }
+    header nav a  {
+        padding: 0%;
+    }
+    figure a div {
+        bottom: 45%;
+        left: 0;
+    }
+    .work-examples h4 {
+        font-size: 14px;
+    }
 
-  }
+    #contact-me-container {
+        display: grid;
+    }
+  }  
     
   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
   @media screen and (max-width: 575px) {
-      
-  }
+
+}
