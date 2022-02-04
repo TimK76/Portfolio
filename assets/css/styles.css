@@ -243,9 +243,6 @@ footer h4 {
           font-size: 32px;
           margin-top: 15px;
       }
-    #contact {
-        /* justify-content: start; */
-    }
 
     #contact-me-container {
         display: flex;
